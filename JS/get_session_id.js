@@ -1,0 +1,1 @@
+document.write(sessionStorage.getItem("Session_Storage_test"));// 화면에 받아온 ID입력

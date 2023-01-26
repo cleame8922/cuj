@@ -1,0 +1,86 @@
+<!doctype html>
+<!-- 이 부분은 주석문 입니다. 웹 브라우더는 주석을 화면에 출력하지 않습니다.-->
+<html>
+	<! 탭에 표시되는 이름>
+    <title>
+        로그인 </title>
+	<! head태그 - 가장 위에 붙는 아이들>
+    <head>
+		
+		<! 메타 태그>
+        <meta name="author" content="학번">
+        <meta charset="utf-8">
+        <meta name="keywords" content="computer">
+		
+		<! 메타링크> 
+        <base href="https://cuj-gybla.run.goorm.app">
+		
+		<! 스크립트>
+		<script src = "JS/over.js"></script>
+		<script src = "JS/input.js"></script>
+		<script src = "JS/session_storage1.js"></script>
+		
+    </head>
+	
+	<! body태그 - 중간에 들어가는 것들>
+    <body>
+       
+		 <! hr은 밑줄을 그려줌>
+        <hr>
+		
+		<! 이미지 삽입>
+        <p style="text-align:center">
+            <a href="index.html" target="_blank">
+                <img src="img/google_img.png" alt="구글이미지" onmouseover = "over(this)" onmouseout = "out(this)">
+            </a>
+		</p>
+	
+		<br><br><br>
+		
+			<div style = "text-align : center">
+				
+				<! 검색 창 대신 문자열을 삽입>
+			<b>
+				<font size = "6em" color = "green"> 구글 계정으로 로그인 </font>
+			</b>
+				
+				<br><br><br>
+				
+				<! GET방식 로그인, 패스워드>
+				<form action = "index_main.html" id = "form_send">
+					<!--폼 내부 전송을 위해 GET방식으로 전송-->
+					<label for = "user_id"> GOOGLE ID : </label>
+					<input type = "email" id = "js_userid1" name = "id" value = "아이디 입력"><br>
+					<label for = "user_pass"> PASSWORD : </label>
+					<input type = "password" id = "js_password1" name = "pw" value = "패스워드 입력"> <br><br>
+					<input type = "submit" value = "로그인 - GET방식" onclick = "session_save();">
+					<input type = "reset">
+				</form>
+			</div>
+		
+				<br><br>
+		
+			<! POST방식 로그인, 패스워드>
+			<div style = "text-align:center"> 
+				<form id = "form_send" action = "index_main.html"> 
+		
+				<label for = "user_id"> GOOGLE ID : </label>
+				<input type = "email" id = "js_userid2" name = "id" value = "아이디 입력">
+				<br>
+		
+				<label for = "user_pass"> PASSWARD : </label>
+				<input type = "password" id = "js_password2" name = "pw" value = "패스워드 입력">
+				<br><br>
+				<input type = "submit" onclick = "form_check()" value = "로그인 - POST방식">
+				<input type = "reset">
+				<br><br>
+		
+		
+				</form>
+			</div>
+        
+			<! 간격을 위해 줄바꿈을 여러번 추가>
+			<br><br>
+		     
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- 이 부분은 주석문 입니다. 웹 브라우더는 주석을 화면에 출력하지 않습니다.-->
+<html>
+	<! 탭에 표시되는 이름>
+    <title>
+        동영상</title>
+	
+	<! head태그 - 가장 위에 붙는 아이들>
+    <head>
+		
+		<! 메타 태그>
+        <meta name="author" content="학번">
+        <meta charset="utf-8">
+        <meta name="keywords”" content="“computer">
+		
+		<! 메타 링크>
+        <base href="https://cuj-gybla.run.goorm.app">
+		
+		<! 스크립트>
+		<script src = "JS/audio.js"defer></script>
+		<script src = "JS/video.js"defer></script>
+		
+    </head>
+	
+	<! body태그 - 중간에 들어가는 것들>
+    <body>
+		
+		<h3>오디오와 비디오 내장하기</h3>
+		<hr>
+		<audio id = "audio" src = "mov/Immortal_NEFFEX(audio).mp3"loop controls>웹브라우저가 audio 태그를 지원하지 않습니다.</audio>
+		<hr>
+		<video id = "video" width = "0" height = "0" controls>
+		<source src = "mov/Skyscrapers_91744(video).mp4" type = "video/mp4">웹 브라우저가 video 태그를 지원하지 않습니다.</video>
+		
+		<div id = "msg">이곳에 오디어 제어 메세지 출력</div>
+		<button type = "button" id = "play" onclick = "control(event)">play</button>
+		<button type = "button" id = "pause" onclick = "control(event)">pause</button>
+		<button type = "button" id = "replay" onclick = "control(event)">replay</button>
+		<button type = "button" id = "vol-" onclick = "control(event)">vol-</button>
+		<button type = "button" id = "vol+" onclick = "control(event)">vol+</button>
+		<button type = "button" id = "mute on/off" onclick = "control(event)">mute on/off</button>
+		
+		<!--미디어를 제어할 버튼 생성-->
+		<button type = "button" id = "play" onclick = "play();">재생/일시정지</button>
+		<button type = "button" id = "play" onclick = "big();">큰화면</button>
+		<button type = "button" id = "play" onclick = "small();">작은화면</button>
+    </body>
+	
+</html>

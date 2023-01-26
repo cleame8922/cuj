@@ -1,0 +1,93 @@
+<!doctype html>
+<!-- 이 부분은 주석문 입니다. 웹 브라우더는 주석을 화면에 출력하지 않습니다.-->
+<!-- 로그인 후 화면-->
+<html>
+	<! 탭에 표시되는 이름>
+    <title>
+       로그인 후 메인화면 </title>
+	
+	<! head태그 - 가장 위에 붙는 아이들>
+    <head>
+		
+		<! 메타 태그>
+        <meta name="author" content="학번">
+        <meta charset="utf-8">
+        <meta name="keywords" content="computer">
+		
+		<! 메타링크> 
+        <base href="https://cuj-gybla.run.goorm.app">
+		
+		<! 스크립트>
+		<script src = "JS/over.js"></script>
+		<script src = "JS/test.js"></script>
+		<script src = "JS/input.js"></script>
+		<script src = "JS/cookie.js"></script>
+		<script src = "JS/local_storage.js"></script>
+		<script src = "JS/time_logout.js"></script>
+		<script src = "JS/map.js"defer></script>
+		<script src = "JS/key_log.js"defer></script>
+		<script type = "text/javascript" src = "//dapi.kakao.com/v2/maps/sdk.js?appkey=cf08ca97c1ce7570830d8b4fc511f23d"></script>
+    </head>
+	
+	<! body태그 - 중간에 들어가는 것들>
+    <body>
+		
+		<! 링크로 연결>
+		<a href = "map.html">카카오 맵 연동 테스트</a>
+		
+		<! 사용자 이름/로그아웃 버튼>
+		<p style = "text-align:right">
+			<button type = "button" style = "WIDTH : 130pt; HEIGHT : 35pt; COLOR : WHITE; background-color : WHITE">
+				<B>
+					<! get_id.js 불러오기 - get_id는 head에서 부르는것이 아닌 사용하는 곳에서 직접 부름>
+					<font size = "2em" style = "COLOR : BLACK"> <script src = "JS/get_id.js"></script> </font>
+				</B>
+			</button>
+			<button type = "button" style = "WIDTH : 80pt; HEIGHT : 35pt; color : WHITE; background-color : GREY"
+			onclick = "self.location.href = 'index.html';" onclick = "delCookie(); local_del(); session_del();">
+				<B>
+					<font size = "3em"> 로그아웃</font>
+				</B>
+				
+			</button>
+				<br>
+		</p>
+		
+		 <! 줄바꿈>
+		<br>
+		 <! 밑줄 그려주는 아이>
+        <hr>
+		
+		<! 구글 이미지 삽입>
+        <p style="text-align:center">
+            <a href="index.html" target="_blank">
+                <img src="img/google_img.png" alt="구글이미지" onmouseover = "over(this)" onmouseout = "out(this)">
+            </a>
+    	</p>
+        
+		<br><br><br>
+		
+		<! 검색 버튼 삽입>
+        <p style="text-align:center">
+            검색 :
+            <input type="text" name="search" size="55" value="">
+           <button type="button" onclick = "local_save();">검색</button>
+            <br>
+		</p>
+	
+        <br><br><br><br><! 간격을 위해 줄바꿈을 여러번 추가>
+		
+		<! 지도 삽입>
+		<div id = "map" style = "width : 700px; height : 400px; margin : 0 auto;"></div>
+		<p style = "text-align:center"><em>지도를 클릭해주세요!</em></p>
+		<p style = "text-align:center" id = "result"></p>
+			
+        <br>
+    </body>
+</html>
+
+
+
+<!--a2enmod rewrite-->
+<!--service apache2 start-->
+	

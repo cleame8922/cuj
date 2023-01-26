@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- 이 부분은 주석문 입니다. 웹 브라우더는 주석을 화면에 출력하지 않습니다.-->
+<html>
+	<! 탭에 표시되는 이름>
+    <title>
+        회원가입 </title>
+	
+	<! head태그 - 가장 위에 붙는 아이들>
+    <head>
+		
+		<! 메타 태그>
+        <meta name="author" content="학번">
+        <meta charset="utf-8">
+        <meta name="keywords" content="computer">
+		
+		<! 메타 링크>
+        <base href="https://cuj-gybla.run.goorm.app">
+		
+		
+		<! 스크립트>
+		<script src = "JS/user_join.js"defer></script>
+		<script src = "JS/over.js"defer></script>
+		<script src = "JS/cookie.js"></script>
+		<script src = "JS/local_storage.js"></script>
+		
+    </head>
+	
+	<! body태그 - 중간에 들어가는 것들>
+    <body>
+		
+		<! 이미지까지의 거리에 맞게 공백 추가>
+		<br><br><br><br><br>
+		
+		<! 이미지 삽입>
+		 <div style="text-align:center">
+            <a href="index.html" target="_blank">
+                <img src="img/google_img.png" alt= "구글이미지" onmouseover = "over(this)" onmouseout = "out(this)">
+            </a>
+		
+			 <br><br><br>
+			 
+			<! 구글 계정만들기 문장 삽입>s
+            <font size="8em" color="green">
+                Google 계정 만들기</font>
+			 
+			 <br><br><br>
+			 
+			 <! 폰트를 볼드체로 설정>
+			<B>
+				<font size = "3em"></font>
+			</B>
+			 
+			 <form>
+				 
+				 <! 성, 이름, 이메일, 패스워드 입력 칸 삽입>
+				<input type="text" lastname = "local" name="search" size="20" value="성"> <input type="text" lastname = "local" name="search" size="20" value="이름">
+			<br>
+				<input type = "email" id = "js_joinid" name = "id" value = "이메일 입력"><br>
+
+
+				<font size="4em" color="green"> 문자, 숫자, 마침표를 사용할 수 있습니다. </font>
+
+			<br><br><br>
+
+			<input type = "password" id = "js_password1" name = "pw" value = "패스워드 입력">
+			<input type = "password" id = "js_password2" name = "pw" value = "패스워드 입력">
+				 <br><br>
+
+				<font size="4em" color="green">
+				   문자, 숫자, 기호를 조합하여 8자 이상을 사용하세요. </font>
+
+				 <br>
+				 <br>
+
+				 <! 회원가입 버튼 클릭시 join_check함수실행, 로컬에 이메일 저장>
+				 <input type = "button" onclick = "join_check(); local_save();" value="회원가입">
+				 <button type = "button">재입력</button>
+				 				 
+			 </form>
+		</div>
+    </body>
+</html>
